@@ -1,13 +1,24 @@
-<%= link_to "All Games", games_path%>
-
-
-<h1><%= "Game #{@game.id}"%></h1>
+<h1><%= "Game on #{@game.date} at  #{@game.location}"%></h1>
 
 <ol>
 <% @game.players.each do |player|%>
-  <li><%= link_to player.name, player_path(player)%></li>
+  <li> <%= link_to player.name, player_path(player)%> -
+    <% game_stat = player.statistics.select do |stat| %>
+    <% stat.game_id == @game.id %>
+    <% end %>
+    Points: <%= game_stat[0].points %>
+    Rebounds: <%= game_stat[0].rebounds %>
+    Assists: <%= game_stat[0].assists %>
+    Steals: <%= game_stat[0].steals %>
+    Blocks: <%= game_stat[0].blocks %>
+    Turnovers: <%= game_stat[0].turnovers %>
+    <%= button_to "Remove Player", statistic_path(player.statistics), method: :delete %>
+  </li>
+
 <% end%>
 </ol>
 
 
 <%= link_to "Edit Game", edit_game_path%>
+<p></p>
+<%= link_to "Add Player to Game", new_statistic_path %>

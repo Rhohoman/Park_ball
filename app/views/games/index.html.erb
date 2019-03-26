@@ -1,8 +1,10 @@
-<h1>All Games</h1>
-
+<h1>All Games by Location and Date:</h1>
+<ol>
 <% @games.each do |game|%>
-<%= link_to "Game #{game.id}", game_path(game)%><br>
+<li> <%= link_to "#{game.location} - #{game.date}", game_path(game)%> </li>
+<br>
 <%end%>
+</ol>
 
 <br><br><br>
 <%= link_to "Add Game", new_game_path%>

@@ -2,6 +2,12 @@
 
 <%= form_for @statistic do |f|%>
 
+  <%= f.label :player %>
+  <%= f.collection_select :player_id, Player.all, :id, :name %><br><br>
+
+  <%= f.label :game_date %>
+  <%= f.collection_select :game_id, Game.all, :id, :location_date_glue %><br><br>
+
   <%= f.label :points%>
   <%= f.text_field :points%><br><br>
 

@@ -14,7 +14,7 @@ class StatisticsController < ApplicationController
   def create
     @statistic = Statistic.new(statistic_params)
     @statistic.save
-    redirect_to @statistic
+    redirect_to game_path(statistic_params[:game_id])
   end
 
   def edit
@@ -25,6 +25,12 @@ class StatisticsController < ApplicationController
     @statistic = Statistic.find(params[:id])
     @statistic.update(statistic_params)
     redirect_to @statistic
+  end
+
+  def destroy
+    @statistic = Statistic.find(params[:id])
+    @statistic.destroy
+    redirect_to game_path(statistic_params[:game_id])
   end
 
   private

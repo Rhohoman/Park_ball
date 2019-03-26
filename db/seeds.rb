@@ -61,3 +61,16 @@ Statistic.create!(player_id: desk.id, game_id: game1.id, points: 1, assists: 0, 
 Statistic.create!(player_id: brain.id, game_id: game1.id, points: 20, assists: 5, blocks: 2, rebounds: 5, steals: 3, turnovers: 8)
 Statistic.create!(player_id: beef.id, game_id: game1.id, points: 12, assists: 0, blocks: 2, rebounds: 10, steals: 4, turnovers: 8)
 Statistic.create!(player_id: dan.id, game_id: game1.id, points: 81, assists: 0, blocks: 2, rebounds: 10, steals: 14, turnovers: 8)
+
+#game 2 bobcats
+Statistic.create!(player_id: kobe.id, game_id: game2.id, points: 5, assists: 0, blocks: 2, rebounds: 10, steals: 14, turnovers: 8)
+Statistic.create!(player_id: ray.id, game_id: game2.id, points: 51, assists: 13, blocks: 2, rebounds: 5, steals: 4, turnovers: 3)
+Statistic.create!(player_id: simone.id, game_id: game2.id, points: 14, assists: 6, blocks: 1, rebounds: 10, steals: 1, turnovers: 4)
+Statistic.create!(player_id: jo.id, game_id: game2.id, points: 18, assists: 6, blocks: 0, rebounds: 11, steals: 0, turnovers: 4)
+Statistic.create!(player_id: doublelift.id, game_id: game2.id, points: 12, assists: 10, blocks: 0, rebounds: 1, steals: 0, turnovers: 4)
+#game 2 herbs
+Statistic.create!(player_id: lebron.id, game_id: game2.id, points: 8, assists: 10, blocks: 2, rebounds: 1, steals: 4, turnovers: 4)
+Statistic.create!(player_id: desk.id, game_id: game2.id, points: 1, assists: 0, blocks: 0, rebounds: 0, steals: 1, turnovers: 0)
+Statistic.create!(player_id: brain.id, game_id: game2.id, points: 20, assists: 5, blocks: 2, rebounds: 5, steals: 3, turnovers: 8)
+Statistic.create!(player_id: beef.id, game_id: game2.id, points: 12, assists: 0, blocks: 2, rebounds: 10, steals: 4, turnovers: 8)
+Statistic.create!(player_id: dan.id, game_id: game2.id, points: 81, assists: 0, blocks: 2, rebounds: 10, steals: 14, turnovers: 8)
