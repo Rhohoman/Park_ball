@@ -1,0 +1,12 @@
+<%= link_to "Teams Page", teams_path%><br>
+<%= link_to "Edit Team", edit_team_path%>
+
+
+<h1><%= "Team #{@team.name}"%></h1>
+<%="Team mascot: #{@team.mascot}"%><br>
+<%="Location: #{@team.location}"%><br><br>
+
+<h2>Players:</h2>
+<% @team.players.each do |player|%>
+  <%=link_to player.name, player_path(player)%><%=", #{player.position}"%><br>
+<%end %>

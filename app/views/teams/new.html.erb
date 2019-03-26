@@ -1,0 +1,15 @@
+<h1>New Team</h1>
+
+<%= form_for @team do |f|%>
+
+  <%= f.label :location%>
+  <%= f.text_field :location%><br><br>
+
+  <%= f.label :name%>
+  <%= f.text_field :name%><br><br>
+
+  <%= f.label :mascot%>
+  <%= f.text_field :mascot%><br><br>
+
+  <%= f.submit%>
+<%end%>

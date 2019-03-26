@@ -1,0 +1,13 @@
+<%= link_to "All Games", games_path%>
+
+
+<h1><%= "Game #{@game.id}"%></h1>
+
+<ol>
+<% @game.players.each do |player|%>
+  <li><%= link_to player.name, player_path(player)%></li>
+<% end%>
+</ol>
+
+
+<%= link_to "Edit Game", edit_game_path%>

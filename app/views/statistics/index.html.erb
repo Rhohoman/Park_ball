@@ -1,0 +1,7 @@
+<h1>All Statistics</h1>
+
+<ol>
+<% @statistics.each do |statistic|%>
+<li> <%= "Player name: #{statistic.player.name}, Player id: #{statistic.player_id}, Game id: #{statistic.game_id}, Points: #{statistic.points}, Rebounds: #{statistic.rebounds}, Assists: #{statistic.assists}, Steals: #{statistic.steals}, Blocks: #{statistic.blocks}, Turnovers: #{statistic.turnovers}"%> </li><br>
+<%end%>
+</ol>

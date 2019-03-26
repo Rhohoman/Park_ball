@@ -1,0 +1,24 @@
+<h1>New Statistic</h1>
+
+<%= form_for @statistic do |f|%>
+
+  <%= f.label :points%>
+  <%= f.text_field :points%><br><br>
+
+  <%= f.label :rebounds%>
+  <%= f.text_field :rebounds%><br><br>
+
+  <%= f.label :assists%>
+  <%= f.text_field :assists%><br><br>
+
+  <%= f.label :steals%>
+  <%= f.text_field :steals%><br><br>
+
+  <%= f.label :blocks%>
+  <%= f.text_field :blocks%><br><br>
+
+  <%= f.label :turnovers%>
+  <%= f.text_field :turnovers%><br><br>
+
+  <%= f.submit%>
+<%end%>
