@@ -1,0 +1,49 @@
+<h1>Point Guards</h1>
+
+<ul>
+  <% @players.select do |player| %>
+    <% if player.position == "Point Guard" %>
+      <li> <%= link_to player.name, player %> </li>
+    <% end %>
+  <% end %>
+</ul>
+
+<h1>Shooting Guards</h1>
+
+<ul>
+  <% @players.select do |player| %>
+    <% if player.position == "Shooting Guard" %>
+      <li> <%= link_to player.name, player %> </li>
+    <% end %>
+  <% end %>
+</ul>
+
+<h1>Small Forwards</h1>
+
+<ul>
+  <% @players.select do |player| %>
+    <% if player.position == "Small Forward" %>
+      <li> <%= link_to player.name, player %> </li>
+    <% end %>
+  <% end %>
+</ul>
+
+<h1>Power Forwards</h1>
+
+<ul>
+  <% @players.select do |player| %>
+    <% if player.position == "Power Forward" %>
+      <li> <%= link_to player.name, player %> </li>
+    <% end %>
+  <% end %>
+</ul>
+
+<h1>Centers</h1>
+
+<ul>
+  <% @players.select do |player| %>
+    <% if player.position == "Center" %>
+      <li> <%= link_to player.name, player %> </li>
+    <% end %>
+  <% end %>
+</ul>
