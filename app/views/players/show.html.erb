@@ -1,0 +1,25 @@
+<h1><%= @player.name %></h1>
+<h2>Team: <%= @player.team.name %> </h2>
+<h3>Age: <% if @player.age == nil %>
+            <%= "Not Available" %>
+         <% else %>
+            <%= @player.age %>
+         <% end %>
+<br>
+<%= button_to "Edit", edit_player_path, method: :get %>
+<p></p>
+
+</h3> PPG: <%= @player.average_points %> </h3>
+<br>
+</h3> RPG: <%= @player.average_rebounds %> </h3>
+<br>
+</h3> APG: <%= @player.average_assists %> </h3>
+<br>
+</h3> SPG: <%= @player.average_steals %> </h3>
+<br>
+</h3> BPG: <%= @player.average_blocks %> </h3>
+<br>
+</h3> TO: <%= @player.average_turnovers %> </h3>
+
+<p></p>
+<%= button_to "Delete Profile", @player, method: :delete %>

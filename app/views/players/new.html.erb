@@ -1,0 +1,19 @@
+<h1>Sign up!</h1>
+
+<%= form_for @player do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :age %>
+  <%= f.number_field :age %>
+  <br>
+  <%= f.label :team %>
+  <%= f.collection_select :team_id, Team.all, :id, :name %>
+  <br>
+  <%= f.label :position %>
+  <%= f.select :position, ['Point Guard', 'Shooting Guard', 'Small Forward', 'Power Forward', 'Center']%>
+  <br>
+  <%= f.submit "Sign Up"%>
+
+<% end %>
