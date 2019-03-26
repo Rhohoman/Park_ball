@@ -11,6 +11,7 @@ class Player < ApplicationRecord
     sum_points = points_array.compact.sum
     if sum_points != 0
       average_points = sum_points / points_array.compact.length
+      #not a float
       return average_points
     else
       return 0
