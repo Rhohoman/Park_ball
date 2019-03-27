@@ -2,6 +2,7 @@
 <ol>
 <% @games.each do |game|%>
 <li> <%= link_to "#{game.location} - #{game.date}", game_path(game)%> </li>
+<%= button_to "Delete Game", game, method: :delete %>
 <br>
 <%end%>
 </ol>

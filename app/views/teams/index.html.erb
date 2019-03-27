@@ -4,6 +4,7 @@
   <% @teams.each do |team|%>
   <li>
     <%=link_to team.name, team_path(team)%>
+    <%= button_to "Delete Team", team, method: :delete %>
   </li>
   <%end%>
 </ol>
