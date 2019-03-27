@@ -14,7 +14,11 @@ class PlayersController < ApplicationController
 
   def create
     @player = Player.create(player_params)
-    redirect_to @player
+    if @player.valid?
+      redirect_to @player
+    else
+      render :new
+    end
   end
 
   def edit
@@ -23,8 +27,11 @@ class PlayersController < ApplicationController
 
   def update
     find_player
-    @player.update(player_params)
-    redirect_to @player
+    if @player.update(player_params)
+      redirect_to @player
+    else
+      render :edit
+    end
   end
 
   def destroy

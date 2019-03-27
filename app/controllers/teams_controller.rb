@@ -14,8 +14,12 @@ class TeamsController < ApplicationController
 
   def create
     @team = Team.new(team_params)
-    @team.save
-    redirect_to @team
+    if @team.valid?
+      @team.save
+      redirect_to @team
+    else
+      render :new
+    end
   end
 
   def edit
@@ -24,8 +28,17 @@ class TeamsController < ApplicationController
 
   def update
     @team = Team.find(params[:id])
-    @team.update(team_params)
-    redirect_to @team
+    if @team.update(team_params)
+      redirect_to @team
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @team = Team.find(params[:id])
+    @team.destroy
+    redirect_to teams_path
   end
 
   private
