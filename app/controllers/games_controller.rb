@@ -14,19 +14,26 @@ class GamesController < ApplicationController
 
   def create
     @game = Game.new(game_params)
-    @game.save
-    redirect_to @game
+    if @game.valid?
+      @game.save
+      redirect_to @game
+    else
+      render :new
+    end
   end
 
   def edit
     @game = Game.find(params[:id])
   end
 
-
   def update
     @game = Game.find(params[:id])
-    @game.update(game_params)
-    redirect_to @game
+
+    if @game.update(game_params)
+      redirect_to @game
+    else
+      render :edit
+    end
   end
 
   def destroy
