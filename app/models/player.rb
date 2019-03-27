@@ -3,6 +3,10 @@ class Player < ApplicationRecord
   has_many :statistics
   has_many :games, through: :statistics
 
+  validates :name, presence: true
+  validates :position, presence: true
+  validates :team_id, presence: true
+
   def average_points
     points_array = self.statistics.map do |stat|
       stat.points
