@@ -1,11 +1,16 @@
 <h1><%= @player.name %></h1>
-<h2>Team: <%= @player.team.name %> </h2>
+<h2>Team: <% if @player.team == nil %>
+            <%= "None" %>
+          <% else %>
+            <%= @player.team.name %>
+          <% end %>
+           </h2>
 <h3>Age: <% if @player.age == nil %>
             <%= "Not Available" %>
          <% else %>
             <%= @player.age %>
          <% end %>
-<br>
+</h3><br>
 <%= button_to "Edit", edit_player_path, method: :get %>
 <p></p>
 
