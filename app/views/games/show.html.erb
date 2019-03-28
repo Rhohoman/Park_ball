@@ -67,6 +67,14 @@
   <%= link_to "Edit Game", edit_game_path%>
   <p></p>
   <%= link_to "Add Player to Game", new_statistic_path %>
+  <p></p>
+  <%= link_to "Leave a Comment", new_comment_path %>
 
+  <ol>
+  <% @game.comments.each do |comment|%>
+    <li><%= comment.content%></li>
+    <%end%>
+  </ol>
+  
   </body>
 </html>
