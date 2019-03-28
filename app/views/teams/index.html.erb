@@ -28,6 +28,7 @@
 
 <h1>All Teams</h1>
 
+<div id="mainblock">
 <ol>
   <% @teams.each do |team|%>
   <li>
@@ -37,8 +38,7 @@
   <%end%>
 </ol>
 
-
-
+</div>
 
 <%= link_to "New Team", new_team_path%>
 </body>
