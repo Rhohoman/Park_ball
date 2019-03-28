@@ -34,7 +34,7 @@ class CommentsController < ApplicationController
     game_comments.each do |comment|
       #for seeds push in with iteration
 
-      if all_comments_array.length < 10
+      if all_comments_array.length < 5
 
         all_comments_array.push(comment)
         #brings new comment to last element in array

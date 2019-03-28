@@ -9,6 +9,7 @@
 <h1>Edit <%= "#{@statistic.player.name}"%></h1>
 
 <%= form_for @statistic do |f|%>
+<input type="hidden" id="game_id" name="game_id" value= <%= @statistic.game_id %> >
 
   <%= f.label :points%>
   <%= f.text_field :points%><br><br>

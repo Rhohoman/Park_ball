@@ -61,6 +61,7 @@ h1 {
   width: 400px;
   margin: 0 auto;
   border-style: solid;
+  opacity: 0.8;
 }
 
 
@@ -91,12 +92,42 @@ h1 {
   width: 400px;
   margin: 0 auto;
   border-style: solid;
+  opacity: 0.8;
 }
 
 
 #playerblock p {
   display: block;
+  text-align: left;
+  padding: 14px 25px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
   color: black;
+  font-family: 'Roboto', sans-serif;
+}
+
+#playerblock a:link {
+    text-decoration: none;
+}
+
+#playerblock a {
+    color: #bf8c2f;
+}
+
+/* ###############################  COMMENTS INDEX  ####################################### */
+
+#commentblock {
+  background-color: white;
+  width: 100%;
+  margin: 0 auto;
+  border-style: solid;
+  opacity: 1;
+}
+
+
+#commentblock p {
+  display: block;
   text-align: left;
   padding: 14px 25px;
   text-decoration: none;

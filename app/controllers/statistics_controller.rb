@@ -28,7 +28,7 @@ class StatisticsController < ApplicationController
   def update
     @statistic = Statistic.find(params[:id])
     if @statistic.update(statistic_params)
-      redirect_to @statistic
+      redirect_to game_path(params[:game_id])
     else
       render :edit
     end
