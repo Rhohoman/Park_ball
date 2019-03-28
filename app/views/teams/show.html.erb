@@ -1,3 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./app/assets/stylesheets/application.css">
+    <style>
+    table, th, td {
+      border: 1px solid black;
+    }
+    .boxscoretable {
+      border: 6px solid #1860A7;
+      background-color: #8DCEDA;
+      width: 100%;
+      text-align: center;
+      color: black;
+      opacity: 0.65;
+    }
+    .bg {
+      background-image: url("https://images.pexels.com/photos/1705165/pexels-photo-1705165.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      background-attachment: fixed;
+      /* background-repeat: repeat; */
+      background-position: top center;
+      background-size: cover;
+    }
+    </style>
+  </head>
+
+<body class="bg">
+
+
 <h1><%= "Team #{@team.name}"%></h1>
 <%="Team mascot: #{@team.mascot}"%><br>
 <%="Location: #{@team.location}"%><br><br>
@@ -8,3 +37,4 @@
 <% end %>
 <p></p>
 <%= link_to "Edit Team", edit_team_path%>
+</body>
