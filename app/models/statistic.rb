@@ -26,4 +26,5 @@ class Statistic < ApplicationRecord
     end
   end
 
+
 end
