@@ -28,6 +28,7 @@
 <body class="bg">
 
 
+  <div id="mainblock">
 
 <h1><%= @player.name %></h1>
 <h2>Team: <% if @player.team == nil %>
@@ -60,4 +61,5 @@
 <p></p>
 <%= button_to "Delete Profile", @player, method: :delete %>
 
+</div>
 </body>

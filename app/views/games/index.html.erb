@@ -28,6 +28,7 @@
 
   <body class="bg">
 <h1>All Games by Location and Date:</h1>
+<div id="mainblock">
 <ol>
 <% @games.each do |game|%>
 <li> <%= link_to "#{game.location} - #{game.date}", game_path(game)%> </li>
@@ -36,9 +37,9 @@
 <%end%>
 </ol>
 
+</div>
 <br><br><br>
 <%= link_to "Add Game", new_game_path%>
 <p></p>
-
 
 </body>

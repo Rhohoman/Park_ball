@@ -28,13 +28,18 @@
 
 
 <h1><%= "Team #{@team.name}"%></h1>
+
+<div id="mainblock">
 <%="Team mascot: #{@team.mascot}"%><br>
 <%="Location: #{@team.location}"%><br><br>
 
 <h2>Players:</h2>
+<ol>
 <% @team.players.each do |player|%>
-  <%=link_to player.name, player_path(player)%><%=", #{player.position}"%><br>
+  <li><%=link_to player.name, player_path(player)%><%="(#{player.position})"%></li>
 <% end %>
+</ol>
 <p></p>
 <%= link_to "Edit Team", edit_team_path%>
 </body>
+</div>
