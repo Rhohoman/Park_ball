@@ -74,3 +74,12 @@ Statistic.create!(player_id: desk.id, game_id: game2.id, points: 1, assists: 0, 
 Statistic.create!(player_id: brain.id, game_id: game2.id, points: 20, assists: 5, blocks: 2, rebounds: 5, steals: 3, turnovers: 8)
 Statistic.create!(player_id: beef.id, game_id: game2.id, points: 12, assists: 0, blocks: 2, rebounds: 10, steals: 4, turnovers: 8)
 Statistic.create!(player_id: dan.id, game_id: game2.id, points: 81, assists: 0, blocks: 2, rebounds: 10, steals: 14, turnovers: 8)
+
+
+
+comment1_game1 = Comment.create!(game_id: game1.id, content: "This game sucked!")
+comment2_game1 = Comment.create!(game_id: game1.id, content: "This game really sucked!")
+comment3_game1 = Comment.create!(game_id: game1.id, content: "This game really REALLY sucked!")
+comment1_game2 = Comment.create!(game_id: game2.id, content: "This game sucked!")
+comment2_game2 = Comment.create!(game_id: game2.id, content: "This game really sucked!")
+comment3_game2 = Comment.create!(game_id: game2.id, content: "This game really REALLY sucked!")

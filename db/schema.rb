@@ -10,11 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_25_203141) do
+ActiveRecord::Schema.define(version: 2019_03_27_184343) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "game_id"
-    t.integer "player_id"
     t.string "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
