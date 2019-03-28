@@ -1,51 +1,62 @@
-<h1>Point Guards</h1>
 
-<ul>
+<div>
+<h1>Point Guards</h1>
+</div>
+<div id="playerblock" >
   <% @players.select do |player| %>
     <% if player.position == "Point Guard" %>
-      <li> <%= link_to player.name, player %> </li>
+      <p> <%= link_to player.name, player %> </p>
     <% end %>
   <% end %>
-</ul>
 
+</div>
+
+<div>
 <h1>Shooting Guards</h1>
+</div>
 
-<ul>
+<div id="playerblock" >
   <% @players.select do |player| %>
     <% if player.position == "Shooting Guard" %>
-      <li> <%= link_to player.name, player %> </li>
+      <p> <%= link_to player.name, player %> </p>
     <% end %>
   <% end %>
-</ul>
+</div>
 
+<div>
 <h1>Small Forwards</h1>
+</div>
 
-<ul>
+<div id="playerblock" >
   <% @players.select do |player| %>
     <% if player.position == "Small Forward" %>
-      <li> <%= link_to player.name, player %> </li>
+      <p> <%= link_to player.name, player %> </p>
     <% end %>
   <% end %>
-</ul>
+</div>
 
+<div>
 <h1>Power Forwards</h1>
+</div>
 
-<ul>
+<div id="playerblock" >
   <% @players.select do |player| %>
     <% if player.position == "Power Forward" %>
-      <li> <%= link_to player.name, player %> </li>
+      <p> <%= link_to player.name, player %> </p>
     <% end %>
   <% end %>
-</ul>
+</div>
 
+<div>
 <h1>Centers</h1>
+</div>
 
-<ul>
+<div id="playerblock" >
   <% @players.select do |player| %>
     <% if player.position == "Center" %>
-      <li> <%= link_to player.name, player %> </li>
+      <p> <%= link_to player.name, player %> </p>
     <% end %>
   <% end %>
-</ul>
+</div>
 
 <%= link_to "Sign Up", new_player_path %>
