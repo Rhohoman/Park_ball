@@ -18,8 +18,8 @@ class Statistic < ApplicationRecord
     current_stats = Statistic.where(game_id: self.game_id)
 
     current_stats.each do |stat|
-        players_list.push(stat.player_id)
-      end
+      players_list.push(stat.player_id)
+    end
 
     if players_list.include?(self.player_id)
       errors.add(:player_id, "is already in current game.")

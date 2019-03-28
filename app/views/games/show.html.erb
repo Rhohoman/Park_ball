@@ -12,7 +12,6 @@
     Steals: <%= game_stat[0].steals %>
     Blocks: <%= game_stat[0].blocks %>
     Turnovers: <%= game_stat[0].turnovers %>
-    <%= button_to "Edit Player Stats", edit_statistic_path(game_stat[0]), method: :get %>
     <%= button_to "Remove Player", statistic_path(game_stat[0]), method: :delete %>
     <br>
   </li>
@@ -21,11 +20,17 @@
 </ol>
 
 
-#game array = all players from the link of the game and players from view
-#game array iterate get all players from team_1 = all players from team 1
-#game array iterate get all players from team_2 = all players from team 2
-
-
 <%= link_to "Edit Game", edit_game_path%>
 <p></p>
 <%= link_to "Add Player to Game", new_statistic_path %>
+<p></p>
+<%= link_to "Leave a Comment", new_comment_path %>
+
+
+<h2>Comments</h2>
+
+<ol>
+<% @game.comments.each do |comment|%>
+  <li><%= comment.content%></li>
+<%end%>
+</ol>
