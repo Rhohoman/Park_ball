@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :statistics, only: [:show,:index,:new,:create,:edit,:update,:destroy]
   resources :teams, only: [:show,:index,:new,:create,:edit,:update, :destroy]
   resources :games, only: [:show,:index,:new,:create,:edit,:update, :destroy]
+  resources :comments#, only: [:create, :show, :new]
 end
