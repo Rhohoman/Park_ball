@@ -56,7 +56,6 @@
       <td><!-- Turnovers:--> <%= game_stat[0].turnovers %> </td>
       <td> <%= button_to "Edit Player Stats", edit_statistic_path(game_stat[0]), method: :get %>
       <%= button_to "Remove Player", statistic_path(game_stat[0]), method: :delete %> </td>
-      <br>
     </tr>
 
   <% end%>
@@ -68,13 +67,17 @@
   <p></p>
   <%= link_to "Add Player to Game", new_statistic_path %>
   <p></p>
-  <%= link_to "Leave a Comment", new_comment_path %>
 
-  <ol>
+<h2> Comments </h2>
+<div id="commentblock">
   <% @game.comments.each do |comment|%>
-    <li><%= comment.content%></li>
+    <p> - <%= comment.content%> </p>
     <%end%>
-  </ol>
+
+</div>
+
+    <%= link_to "Leave a Comment", new_comment_path %>
+
 
   </body>
 </html>

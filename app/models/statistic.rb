@@ -11,7 +11,7 @@ class Statistic < ApplicationRecord
   validates :blocks, presence: true, numericality: true
   validates :turnovers, presence: true, numericality: true
 
-  validate :no_dupes_players
+  validate :no_dupes_players, on: :create
 
   def no_dupes_players
     players_list = []
