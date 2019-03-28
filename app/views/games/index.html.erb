@@ -1,26 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./app/assets/stylesheets/application.css">
+    <style>
+    table, th, td {
+      border: 1px solid black;
+    }
+    .boxscoretable {
+      border: 6px solid #1860A7;
+      background-color: #8DCEDA;
+      width: 100%;
+      text-align: center;
+      color: black;
+      opacity: 0.65;
+    }
+    .bg {
+      background: #d9fafc;
+      background-image: url("https://www.versacourt.com/cmss_files/imagelibrary/Header_Images/header.jpg");
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: center;
+      /* background-size: 3000px 1000px; */
+      background-size: cover;
+    }
+    </style>
+  </head>
 
-<style>
-table, th, td {
-  border: 1px solid black;
-}
-.boxscoretable {
-  border: 6px solid #1860A7;
-  background-color: #8DCEDA;
-  width: 100%;
-  text-align: center;
-  color: black;
-  opacity: 0.65;
-}
-.bg {
-  background:
-    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/652/confectionary.png) repeat;
-    /* url(https://images.pexels.com/photos/1839836/pexels-photo-1839836.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500) center no-repeat; */
-}
-</style>
-
-
-<body class="bg">
-
+  <body class="bg">
 <h1>All Games by Location and Date:</h1>
 <ol>
 <% @games.each do |game|%>
