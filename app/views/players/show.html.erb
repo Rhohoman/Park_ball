@@ -1,3 +1,26 @@
+
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+.boxscoretable {
+  border: 6px solid #1860A7;
+  background-color: #8DCEDA;
+  width: 100%;
+  text-align: center;
+  color: black;
+  opacity: 0.65;
+}
+.bg {
+  background:
+    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/652/confectionary.png) repeat;
+    /* url(https://images.pexels.com/photos/1839836/pexels-photo-1839836.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500) center no-repeat; */
+}
+</style>
+
+
+<body class="bg">
+
 <h1><%= @player.name %></h1>
 <h2>Team: <% if @player.team == nil %>
             <%= "None" %>
@@ -28,3 +51,5 @@
 
 <p></p>
 <%= button_to "Delete Profile", @player, method: :delete %>
+
+</body>
