@@ -1,6 +1,7 @@
 class Game < ApplicationRecord
   has_many :statistics
   has_many :players, through: :statistics
+  has_many :comments
 
   validates :date, presence: true
   validates :location , presence: true
