@@ -1,36 +1,72 @@
-<h1><%= "Game on #{@game.date} at  #{@game.location}"%></h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./app/assets/stylesheets/application.css">
+    <style>
+    table, th, td {
+      border: 1px solid black;
+    }
 
-<ol>
-<% @game.players.each do |player|%>
-  <li> <%= link_to player.name, player_path(player)%> <%="(#{player.team.name})"%> -
-    <% game_stat = player.statistics.select do |stat| %>
-    <% stat.game_id == @game.id %>
-    <% end %>
-    Points: <%= game_stat[0].points %>
-    Rebounds: <%= game_stat[0].rebounds %>
-    Assists: <%= game_stat[0].assists %>
-    Steals: <%= game_stat[0].steals %>
-    Blocks: <%= game_stat[0].blocks %>
-    Turnovers: <%= game_stat[0].turnovers %>
-    <%= button_to "Remove Player", statistic_path(game_stat[0]), method: :delete %>
-    <br>
-  </li>
+    .boxscoretable {
+      border: 6px solid #1860A7;
+      background-color: #8DCEDA;
+      width: 100%;
+      text-align: center;
+      color: black;
+      opacity: 0.65;
+    }
 
-<% end%>
-</ol>
+    .bg {
+      background: #d9fafc;
+      background-image: url("https://www.versacourt.com/cmss_files/imagelibrary/Header_Images/header.jpg");
+      background-repeat: no-repeat;
+      align: center;
+      background-position: center;
+    }
+    </style>
+  </head>
+
+  <body class="bg">
+  <h1><%= "Game on #{@game.date} at  #{@game.location}"%></h1>
+
+  <table class="boxscoretable" style="width:100%">
+    <tr>
+      <th>Player</th>
+      <th>Team</th>
+      <th>Points</th>
+      <th>Rebounds</th>
+      <th>Assists</th>
+      <th>Steals</th>
+      <th>Blocks</th>
+      <th>Turnovers</th>
+    </tr>
+
+  <% @game.players.each do |player|%>
+    <tr>
+      <td> <%= link_to player.name, player_path(player)%> </td>
+      <td> <%="#{player.team.name}"%> </td>
+      <% game_stat = player.statistics.select do |stat| %>
+      <% stat.game_id == @game.id %>
+      <% end %>
+      <td ><!-- Points:--><%= game_stat[0].points %> </td>
+      <td><!-- Rebounds:--><%= game_stat[0].rebounds %> </td>
+      <td><!-- Assists:--><%= game_stat[0].assists %> </td>
+      <td><!-- Steals:--> <%= game_stat[0].steals %> </td>
+      <td><!-- Blocks:--> <%= game_stat[0].blocks %> </td>
+      <td><!-- Turnovers:--> <%= game_stat[0].turnovers %> </td>
+      <td> <%= button_to "Edit Player Stats", edit_statistic_path(game_stat[0]), method: :get %>
+      <%= button_to "Remove Player", statistic_path(game_stat[0]), method: :delete %> </td>
+      <br>
+    </tr>
+
+  <% end%>
+  </table>
 
 
-<%= link_to "Edit Game", edit_game_path%>
-<p></p>
-<%= link_to "Add Player to Game", new_statistic_path %>
-<p></p>
-<%= link_to "Leave a Comment", new_comment_path %>
 
+  <%= link_to "Edit Game", edit_game_path%>
+  <p></p>
+  <%= link_to "Add Player to Game", new_statistic_path %>
 
-<h2>Comments</h2>
-
-<ol>
-<% @game.comments.each do |comment|%>
-  <li><%= comment.content%></li>
-<%end%>
-</ol>
+  </body>
+</html>
