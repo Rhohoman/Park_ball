@@ -18,7 +18,7 @@
   </head>
 
 <body class="bg">
-
+<div id="formsblock"
 <ul>
 <% if @statistic.errors.any? %>
 <% @statistic.errors.full_messages.each do |msg| %>
@@ -52,4 +52,5 @@
 
   <%= f.submit%>
 <%end%>
+</div>
 </body>

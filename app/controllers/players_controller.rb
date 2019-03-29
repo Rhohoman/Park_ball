@@ -44,6 +44,10 @@ class PlayersController < ApplicationController
 
   end
 
+  def home
+
+  end
+
   private
 
   def find_player

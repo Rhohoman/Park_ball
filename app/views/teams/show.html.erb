@@ -30,8 +30,8 @@
 <h1><%= "Team #{@team.name}"%></h1>
 
 <div id="teamlistblock">
-<%="Team mascot: #{@team.mascot}"%><br>
-<%="Location: #{@team.location}"%><br><br>
+<h4><%="Team mascot: #{@team.mascot}"%></h4>
+<h4><%="Location: #{@team.location}"%></h4>
 
 <%= button_to "Edit Team", edit_team_path, method: :get%>
 

@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   resources :comments#, only: [:create, :show, :new]
 
   get '/analytics', to: 'players#analytics'
-  
+  root 'players#home'
+
 end

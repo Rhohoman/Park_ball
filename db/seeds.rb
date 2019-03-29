@@ -48,6 +48,7 @@ basketball = Player.create!(name:"Soccer Man", position: "Small Forward", team_i
 
 game1 = Game.create!(date: "12/1/19", location: "Brooklyn")
 game2 = Game.create!(date: "12/2/19", location: "Queens")
+game3 = Game.create!(date: "12/3/19", location: "Flatiron")
 
 #game 1 bobcats
 Statistic.create!(player_id: kobe.id, game_id: game1.id, points: 81, assists: 0, blocks: 2, rebounds: 10, steals: 14, turnovers: 8)
@@ -75,7 +76,8 @@ Statistic.create!(player_id: brain.id, game_id: game2.id, points: 20, assists: 5
 Statistic.create!(player_id: beef.id, game_id: game2.id, points: 12, assists: 0, blocks: 2, rebounds: 10, steals: 4, turnovers: 8)
 Statistic.create!(player_id: dan.id, game_id: game2.id, points: 81, assists: 0, blocks: 2, rebounds: 10, steals: 14, turnovers: 8)
 
-
+#game 3
+Statistic.create!(player_id: matt.id, game_id: game3.id, points: 100, assists: 0, blocks: 0, rebounds: 0, steals: 0, turnovers: 0)
 
 comment1_game1 = Comment.create!(game_id: game1.id, content: "This game sucked!", name: "Chrees")
 comment2_game1 = Comment.create!(game_id: game1.id, content: "This game really sucked!", name: "Chrees")
