@@ -1,4 +1,32 @@
-<body>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./app/assets/stylesheets/application.css">
+    <style>
+    table, th, td {
+      border: 1px solid black;
+    }
+
+    .bg {
+      background: #d9fafc;
+      background-image: url("https://media.giphy.com/media/l0MYwdebx8o0XI56E/giphy.gif");
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: center;
+      /* background-size: 3000px 1000px; */
+      background-size: cover;
+    }
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+
+<body class="bg">
 <div id="analyticsblock">
 <h1>Scoring Leader: </h1>
 <h3><%= " #{Player.player_average_most_points[0]} (#{Player.player_average_most_points[1]})" %> PPG </h3><br>
@@ -15,4 +43,4 @@
 <h1>Blocks Leader: </h1>
 <h3><%= "#{Player.player_average_most_blocks[0]} (#{Player.player_average_most_blocks[1]})" %> BPG </h3><br><br>
 </div>
-<body>
+</body>
