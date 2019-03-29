@@ -3,8 +3,20 @@
   <head>
     <link rel="stylesheet" href="./app/assets/stylesheets/application.css">
     <style>
+    a {
+      color: #bf8c2f;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:hover {
+     opacity: 0.5;
+   }
+
     table, th, td {
       border: 1px solid black;
+      font-weight: bold;
     }
     .boxscoretable {
       border: 6px solid #1860A7;
@@ -43,7 +55,7 @@
 
   <% @game.players.each do |player|%>
     <tr>
-      <td> <%= link_to player.name, player_path(player)%> </td>
+      <td>  <%= link_to player.name, player_path(player)%> </td>
       <% if player.team == nil %>
       <td>  <%= "No Team" %> </td>
       <% else %>
