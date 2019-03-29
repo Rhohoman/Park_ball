@@ -31,6 +31,16 @@
   <div id="mainblock">
 
 <h1><%= @player.name %></h1>
+
+<div>
+  <% if @player.img_url == nil || @player.img_url == "" %>
+  <img src="https://i.pinimg.com/474x/34/77/c3/3477c3b54457ef50c2e03bdaa7b3fdc5.jpg" alt="Smiley face" height="250" width="250">
+  <% else %>
+  <img src=<%= "#{@player.img_url}" %> alt="Smiley face" height="250" width="250">
+  <% end %>
+</div>
+
+
 <h2>Team: <% if @player.team == nil %>
             <%= "None" %>
           <% else %>
