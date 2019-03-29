@@ -205,5 +205,6 @@ h1 {
   font-weight: bold;
   color: black;
   font-family: 'Roboto', sans-serif;
-  padding-left: 15px
+  padding-left: 15px;
+  opacity: 0.75;
 }
