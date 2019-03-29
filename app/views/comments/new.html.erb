@@ -1,6 +1,17 @@
+<ul>
+<% if @comment.errors.any? %>
+<% @comment.errors.full_messages.each do |msg| %>
+<li> <%= msg %> </li>
+  <% end %>
+<% end %>
+</ul>
+
 <h1>New Comment</h1>
 
 <%= form_for @comment do |f|%>
+
+  <%= f.label :name%>
+  <%= f.text_field :name%><br><br>
 
   <%= f.label :comment%>
   <%= f.text_field :content%><br><br>

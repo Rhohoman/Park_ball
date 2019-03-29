@@ -20,30 +20,30 @@ statues = Team.create!(location: "Staten Island",name: "Staten Island Statues", 
 flatironers = Team.create!(location: "Brooklyn",name: "Brooklyn Flatironers", mascot: "Flatiron Building")
 
 
-kobe = Player.create!(name:"Kobe Bryant", position: "Shooting Guard", team_id: bobcats.id)
-lebron = Player.create!(name:"Lebron James", position: "Shooting Guard", team_id: herbs.id)
-spongebob = Player.create!(name:"SpongeBob Squarepants", position: "Shooting Guard", team_id: statues.id)
-john = Player.create!(name:"John Starks", position: "Shooting Guard", team_id: flatironers.id)
+kobe = Player.create!(name:"Kobe Bryant", position: "Shooting Guard", team_id: bobcats.id, age: 28, img_url: "https://i.pinimg.com/474x/34/77/c3/3477c3b54457ef50c2e03bdaa7b3fdc5.jpg")
+lebron = Player.create!(name:"Lebron James", position: "Shooting Guard", team_id: herbs.id, age: 28, img_url: "https://i.pinimg.com/474x/34/77/c3/3477c3b54457ef50c2e03bdaa7b3fdc5.jpg")
+spongebob = Player.create!(name:"SpongeBob Squarepants", position: "Shooting Guard", team_id: statues.id, age: 28, img_url: "https://i.pinimg.com/474x/34/77/c3/3477c3b54457ef50c2e03bdaa7b3fdc5.jpg")
+john = Player.create!(name:"John Starks", position: "Shooting Guard", team_id: flatironers.id, age: 28, img_url: "https://i.pinimg.com/474x/34/77/c3/3477c3b54457ef50c2e03bdaa7b3fdc5.jpg")
 
-ray = Player.create!(name:"Ray Allen", position: "Point Guard", team_id: bobcats.id)
-desk = Player.create!(name:"Woody Allen", position: "Point Guard", team_id: herbs.id)
-will = Player.create!(name:"Will Mannychester", position: "Point Guard", team_id: statues.id)
-jim = Player.create!(name:"James Washington IV", position: "Point Guard", team_id: flatironers.id)
+ray = Player.create!(name:"Ray Allen", position: "Point Guard", team_id: bobcats.id, age: 28, img_url: "https://i.pinimg.com/474x/34/77/c3/3477c3b54457ef50c2e03bdaa7b3fdc5.jpg")
+desk = Player.create!(name:"Woody Allen", position: "Point Guard", team_id: herbs.id, age: 28, img_url: "https://i.pinimg.com/474x/34/77/c3/3477c3b54457ef50c2e03bdaa7b3fdc5.jpg")
+will = Player.create!(name:"Will Mannychester", position: "Point Guard", team_id: statues.id, age: 28, img_url: "https://i.pinimg.com/474x/34/77/c3/3477c3b54457ef50c2e03bdaa7b3fdc5.jpg")
+jim = Player.create!(name:"James Washington IV", position: "Point Guard", team_id: flatironers.id, age: 28, img_url: "https://i.pinimg.com/474x/34/77/c3/3477c3b54457ef50c2e03bdaa7b3fdc5.jpg")
 
-simone = Player.create!(name:"Simone May Antetekumpo", position: "Center", team_id: bobcats.id)
-brain = Player.create!(name:"Brain Ury", position: "Center", team_id: herbs.id)
-matt = Player.create!(name:"Matt Bye", position: "Center", team_id: statues.id)
-fred = Player.create!(name:"Freddi Flintstone", position: "Center", team_id: flatironers.id)
+simone = Player.create!(name:"Simone May Antetekumpo", position: "Center", team_id: bobcats.id, age: 28, img_url: "https://i.pinimg.com/474x/34/77/c3/3477c3b54457ef50c2e03bdaa7b3fdc5.jpg")
+brain = Player.create!(name:"Brain Ury", position: "Center", team_id: herbs.id, age: 28, img_url: "https://i.pinimg.com/474x/34/77/c3/3477c3b54457ef50c2e03bdaa7b3fdc5.jpg")
+matt = Player.create!(name:"Matt Bye", position: "Center", team_id: statues.id, age: 28, img_url: "https://i.pinimg.com/474x/34/77/c3/3477c3b54457ef50c2e03bdaa7b3fdc5.jpg")
+fred = Player.create!(name:"Freddi Flintstone", position: "Center", team_id: flatironers.id, age: 28, img_url: "https://i.pinimg.com/474x/34/77/c3/3477c3b54457ef50c2e03bdaa7b3fdc5.jpg")
 
-jo = Player.create!(name:"Jordan Belford", position: "Power Forward", team_id: bobcats.id)
-beef = Player.create!(name:"Cow Man", position: "Power Forward", team_id: herbs.id)
-astro = Player.create!(name:"Tacko Falls", position: "Power Forward", team_id: statues.id)
-zion = Player.create!(name:"Zion Superfragilistickexpialadoucious", position: "Power Forward", team_id: flatironers.id)
+jo = Player.create!(name:"Jordan Belford", position: "Power Forward", team_id: bobcats.id, age: 28, img_url: "https://i.pinimg.com/474x/34/77/c3/3477c3b54457ef50c2e03bdaa7b3fdc5.jpg")
+beef = Player.create!(name:"Cow Man", position: "Power Forward", team_id: herbs.id, age: 28, img_url: "https://i.pinimg.com/474x/34/77/c3/3477c3b54457ef50c2e03bdaa7b3fdc5.jpg")
+astro = Player.create!(name:"Tacko Falls", position: "Power Forward", team_id: statues.id, age: 28, img_url: "https://i.pinimg.com/474x/34/77/c3/3477c3b54457ef50c2e03bdaa7b3fdc5.jpg")
+zion = Player.create!(name:"Zion Superfragilistickexpialadoucious", position: "Power Forward", team_id: flatironers.id, age: 28, img_url: "https://i.pinimg.com/474x/34/77/c3/3477c3b54457ef50c2e03bdaa7b3fdc5.jpg")
 
-doublelift = Player.create!(name:"Duuble Lift", position: "Small Forward", team_id: bobcats.id)
-dan = Player.create!(name:"Dan White", position: "Small Forward", team_id: herbs.id)
-pie = Player.create!(name:"Pie Guy", position: "Small Forward", team_id: statues.id)
-basketball = Player.create!(name:"Soccer Man", position: "Small Forward", team_id: flatironers.id)
+doublelift = Player.create!(name:"Duuble Lift", position: "Small Forward", team_id: bobcats.id, age: 28, img_url: "https://i.pinimg.com/474x/34/77/c3/3477c3b54457ef50c2e03bdaa7b3fdc5.jpg")
+dan = Player.create!(name:"Dan White", position: "Small Forward", team_id: herbs.id, age: 28, img_url: "https://i.pinimg.com/474x/34/77/c3/3477c3b54457ef50c2e03bdaa7b3fdc5.jpg")
+pie = Player.create!(name:"Pie Guy", position: "Small Forward", team_id: statues.id, age: 28, img_url: "https://i.pinimg.com/474x/34/77/c3/3477c3b54457ef50c2e03bdaa7b3fdc5.jpg")
+basketball = Player.create!(name:"Soccer Man", position: "Small Forward", team_id: flatironers.id, age: 28, img_url: "https://i.pinimg.com/474x/34/77/c3/3477c3b54457ef50c2e03bdaa7b3fdc5.jpg")
 
 
 game1 = Game.create!(date: "12/1/19", location: "Brooklyn")
@@ -77,9 +77,9 @@ Statistic.create!(player_id: dan.id, game_id: game2.id, points: 81, assists: 0, 
 
 
 
-comment1_game1 = Comment.create!(game_id: game1.id, content: "This game sucked!")
-comment2_game1 = Comment.create!(game_id: game1.id, content: "This game really sucked!")
-comment3_game1 = Comment.create!(game_id: game1.id, content: "This game really REALLY sucked!")
-comment1_game2 = Comment.create!(game_id: game2.id, content: "This game sucked!")
-comment2_game2 = Comment.create!(game_id: game2.id, content: "This game really sucked!")
-comment3_game2 = Comment.create!(game_id: game2.id, content: "This game really REALLY sucked!")
+comment1_game1 = Comment.create!(game_id: game1.id, content: "This game sucked!", name: "Chrees")
+comment2_game1 = Comment.create!(game_id: game1.id, content: "This game really sucked!", name: "Chrees")
+comment3_game1 = Comment.create!(game_id: game1.id, content: "This game really REALLY sucked!", name: "Chrees")
+comment1_game2 = Comment.create!(game_id: game2.id, content: "This game sucked!", name: "Chrees")
+comment2_game2 = Comment.create!(game_id: game2.id, content: "This game really sucked!", name: "Chrees")
+comment3_game2 = Comment.create!(game_id: game2.id, content: "This game really REALLY sucked!", name: "Chrees")

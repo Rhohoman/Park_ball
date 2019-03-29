@@ -22,6 +22,9 @@
   <%= f.label :position %>
   <%= f.select :position, ['Point Guard', 'Shooting Guard', 'Small Forward', 'Power Forward', 'Center']%>
   <br>
+  <%= f.label :upload_a_profile_picture %>
+  <%= f.text_field :img_url %>
+  <br>
   <%= f.submit "Sign Up"%>
 
 <% end %>

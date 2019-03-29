@@ -6,6 +6,7 @@ class Player < ApplicationRecord
   validates :name, presence: true
   validates :position, presence: true
   validates :team_id, presence: true
+  validates :age, numericality: {greater_than_or_equal_to: 1, only_integer: true}
 
   def average_points
     points_array = self.statistics.map do |stat|
@@ -14,7 +15,7 @@ class Player < ApplicationRecord
 
     sum_points = points_array.compact.sum
     if sum_points != 0
-      average_points = sum_points / points_array.compact.length
+      average_points = (sum_points/1.0) / points_array.compact.length
       #not a float
       return average_points
     else
@@ -29,7 +30,7 @@ class Player < ApplicationRecord
 
     sum_rebounds = rebounds_array.compact.sum
     if sum_rebounds != 0
-      average_rebounds = sum_rebounds / rebounds_array.compact.length
+      average_rebounds = (sum_rebounds/1.0) / rebounds_array.compact.length
       return average_rebounds
     else
       return 0
@@ -43,7 +44,7 @@ class Player < ApplicationRecord
 
     sum_assists = assists_array.compact.sum
     if sum_assists != 0
-      average_assists = sum_assists / assists_array.compact.length
+      average_assists = (sum_assists/1.0) / assists_array.compact.length
       return average_assists
     else
       return 0
@@ -57,7 +58,7 @@ class Player < ApplicationRecord
 
     sum_steals = steals_array.compact.sum
     if sum_steals != 0
-      average_steals = sum_steals / steals_array.compact.length
+      average_steals = (sum_steals/1.0) / steals_array.compact.length
       return average_steals
     else
       return 0
@@ -71,7 +72,7 @@ class Player < ApplicationRecord
 
     sum_blocks = blocks_array.compact.sum
     if sum_blocks != 0
-      average_blocks = sum_blocks / blocks_array.compact.length
+      average_blocks = (sum_blocks/1.0) / blocks_array.compact.length
       return average_blocks
     else
       return 0
@@ -85,7 +86,7 @@ class Player < ApplicationRecord
 
     sum_turnovers = turnovers_array.compact.sum
     if sum_turnovers != 0
-      average_turnovers = sum_turnovers / turnovers_array.compact.length
+      average_turnovers = (sum_turnovers/1.0) / turnovers_array.compact.length
       return average_turnovers
     else
       return 0

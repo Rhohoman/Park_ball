@@ -15,16 +15,18 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.create(comment_params)
-    # byebug
-    @comment.save
-    limit_comments
-    redirect_to game_path(@comment.game_id)
+    if @comment.valid?
+      limit_comments
+      redirect_to game_path(@comment.game_id)
+    else
+      render :new
+    end
   end
 
   private
 
   def comment_params
-    params.require(:comment).permit(:game_id,:content)
+    params.require(:comment).permit(:game_id,:content, :name)
   end
 
   def limit_comments
