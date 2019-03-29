@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./app/assets/stylesheets/application.css">
+    <style>
+    table, th, td {
+      border: 1px solid black;
+    }
+
+    .bg {
+      background: #d9fafc;
+      background-image: url("https://images.pexels.com/photos/1045534/pexels-photo-1045534.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: center;
+      /* background-size: 3000px 1000px; */
+      background-size: cover;
+    }
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+
+<body class="bg">
+<div id="analyticsblock">
+<h1>Welcome to McBallers</h1>
+
+<h3>Our Scoring Leader </h3>
+<h3><%= " #{Player.player_average_most_points[0]} (#{Player.player_average_most_points[1]})" %> </h3><br>
+<img src=<%= "https://media.licdn.com/dms/image/C4D03AQFJXw540SrrzQ/profile-displayphoto-shrink_800_800/0?e=1559174400&v=beta&t=Aiy0Tlwz4ILYftfhG0fQVdYvRIzEwGEyku3sFfJijjY" %> alt="Matt" height= "300" width="300">
+
+
+</div>
+</body>
