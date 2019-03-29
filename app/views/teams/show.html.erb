@@ -29,18 +29,18 @@
 
 <h1><%= "Team #{@team.name}"%></h1>
 
-<div id="mainblock">
+<div id="teamlistblock">
 <%="Team mascot: #{@team.mascot}"%><br>
 <%="Location: #{@team.location}"%><br><br>
 
 <%= button_to "Edit Team", edit_team_path, method: :get%>
 
 <h2>Players:</h2>
-<ol>
+
 <% @team.players.each do |player|%>
-  <li><%=link_to player.name, player_path(player)%><%="(#{player.position})"%></li>
+  <%=link_to player.name, player_path(player)%>    <%= "(#{player.position})" %> <br>
 <% end %>
-</ol>
+
 <p></p>
 </body>
 </div>

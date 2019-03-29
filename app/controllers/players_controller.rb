@@ -40,6 +40,10 @@ class PlayersController < ApplicationController
     redirect_to players_path
   end
 
+  def analytics
+
+  end
+
   private
 
   def find_player
