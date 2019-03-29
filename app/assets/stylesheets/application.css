@@ -185,3 +185,17 @@ h1 {
   font-family: 'Roboto', sans-serif;
   padding-left: 15px
 }
+
+/* ###############################  ANALYTICS BLOCK  ####################################### */
+
+#analyticsblock {
+  background-color: white;
+  width: 450px;
+  margin: 0 auto;
+  border-style: solid;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 15px
+}
