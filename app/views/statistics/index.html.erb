@@ -1,3 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./app/assets/stylesheets/application.css">
+    <style>
+    table, th, td {
+      border: 1px solid black;
+    }
+    .bg {
+      background-image: url("https://images.pexels.com/photos/4413/sport-basketball-basketball-basket.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      background-attachment: fixed;
+      /* background-repeat: repeat; */
+      background-position: top center;
+      background-size: cover;
+      background-position: center;
+    }
+    </style>
+  </head>
+
+<body class="bg">
+
 <h1>All Statistics</h1>
 
 <ol>
@@ -5,3 +26,5 @@
 <li> <%= "Player name: #{statistic.player.name}, Player id: #{statistic.player_id}, Game id: #{statistic.game_id}, Points: #{statistic.points}, Rebounds: #{statistic.rebounds}, Assists: #{statistic.assists}, Steals: #{statistic.steals}, Blocks: #{statistic.blocks}, Turnovers: #{statistic.turnovers}"%> </li><br>
 <%end%>
 </ol>
+
+</body>
