@@ -208,3 +208,12 @@ h1 {
   padding-left: 15px;
   opacity: 0.75;
 }
+
+/* ###############################  ANALYTICS BLOCK  ####################################### */
+
+#footerstuff {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    margin: 0 auto;
+}
