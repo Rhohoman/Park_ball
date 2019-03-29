@@ -58,10 +58,11 @@ h1 {
 /* ###############################  MAIN BLOCKS ####################################### */
 #mainblock {
   background-color: #f1f2e8;
-  width: 400px;
+  width: 450px;
   margin: 0 auto;
   border-style: solid;
   opacity: 0.8;
+  text-align: center;
 }
 
 
@@ -135,4 +136,51 @@ h1 {
   font-weight: bold;
   color: black;
   font-family: 'Roboto', sans-serif;
+}
+
+/* ###############################  PROFILE PIC  ####################################### */
+
+#profilepic {
+  margin: 0 auto;
+  opacity: 1.0;
+  text-align: center;
+}
+
+/* ###############################  TEAMS LIST BLOCK  ####################################### */
+
+#teamlistblock {
+  background-color: #f1f2e8;
+  width: 450px;
+  margin: 0 auto;
+  border-style: solid;
+  opacity: 0.8;
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 15px
+}
+
+#teamlistblock a:link {
+    text-decoration: none;
+}
+
+#teamlistblock a {
+    color: #bf8c2f;
+}
+
+/* ###############################  FORMS BLOCK  ####################################### */
+
+#formsblock {
+  background-color: white;
+  width: 450px;
+  margin: 0 auto;
+  border-style: solid;
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 15px
 }

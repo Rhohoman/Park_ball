@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   resources :teams, only: [:show,:index,:new,:create,:edit,:update, :destroy]
   resources :games, only: [:show,:index,:new,:create,:edit,:update, :destroy]
   resources :comments#, only: [:create, :show, :new]
+
+  get '/analytics', to: 'players#analytics'
+  
 end

@@ -28,7 +28,7 @@
 <body class="bg">
 
 
-
+<div id="formsblock">
 <ul>
 <% if @player.errors.any? %>
 <% @player.errors.full_messages.each do |msg| %>
@@ -59,4 +59,5 @@
   <%= f.submit "Confirm Edit"%>
 
 <% end %>
+</div>
 </body>
