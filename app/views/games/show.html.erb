@@ -44,7 +44,11 @@
   <% @game.players.each do |player|%>
     <tr>
       <td> <%= link_to player.name, player_path(player)%> </td>
+      <% if player.team == nil %>
+      <td>  <%= "No Team" %> </td>
+      <% else %>
       <td> <%="#{player.team.name}"%> </td>
+      <% end %>
       <% game_stat = player.statistics.select do |stat| %>
       <% stat.game_id == @game.id %>
       <% end %>
@@ -71,7 +75,8 @@
 <h2> Comments </h2>
 <div id="commentblock">
   <% @game.comments.each do |comment|%>
-    <p> - <%= comment.content%> </p>
+    <p> <%= "#{comment.name}: " %> <br>
+       <%= "#{comment.content}" %> </p>
     <%end%>
 
 </div>
