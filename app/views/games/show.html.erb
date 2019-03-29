@@ -67,9 +67,9 @@
 
 
 
-  <%= link_to "Edit Game", edit_game_path%>
+  <%= button_to "Edit Game", edit_game_path, method: :get%>
   <p></p>
-  <%= link_to "Add Player to Game", new_statistic_path %>
+  <%= button_to "Add Player to Game", new_statistic_path, method: :get%>
   <p></p>
 
 <h2> Comments </h2>
@@ -81,7 +81,7 @@
 
 </div>
 
-    <%= link_to "Leave a Comment", new_comment_path %>
+    <%= button_to "Leave a Comment", new_comment_path, method: :get %>
 
 
   </body>

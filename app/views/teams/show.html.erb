@@ -33,6 +33,8 @@
 <%="Team mascot: #{@team.mascot}"%><br>
 <%="Location: #{@team.location}"%><br><br>
 
+<%= button_to "Edit Team", edit_team_path, method: :get%>
+
 <h2>Players:</h2>
 
 <% @team.players.each do |player|%>
@@ -40,6 +42,5 @@
 <% end %>
 
 <p></p>
-<%= link_to "Edit Team", edit_team_path%>
 </body>
 </div>

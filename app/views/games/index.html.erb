@@ -6,14 +6,7 @@
     table, th, td {
       border: 1px solid black;
     }
-    .boxscoretable {
-      border: 6px solid #1860A7;
-      background-color: #8DCEDA;
-      width: 100%;
-      text-align: center;
-      color: black;
-      opacity: 0.65;
-    }
+
     .bg {
       background: #d9fafc;
       background-image: url("https://images.pexels.com/photos/305243/pexels-photo-305243.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
@@ -23,6 +16,35 @@
       /* background-size: 3000px 1000px; */
       background-size: cover;
     }
+    .button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      margin: 40px 600px;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      cursor: pointer;
+    }
+
+    .button5 {
+      border-radius: 10px;
+      background-color: white;
+      color: black;
+      border: 2px solid #555555;
+    }
+
+    .button5:hover {
+      background-color: #555555;
+      color: white;
+    }
+
+
+
     </style>
   </head>
 
@@ -39,7 +61,7 @@
 
 </div>
 <br><br><br>
-<%= link_to "Add Game", new_game_path%>
+<%= button_to "Add Game", new_game_path,:class => "button button5", :method => :get %>
 <p></p>
 
 </body>
