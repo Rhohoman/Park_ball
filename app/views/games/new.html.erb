@@ -1,3 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./app/assets/stylesheets/application.css">
+    <style>
+    table, th, td {
+      border: 1px solid black;
+    }
+    .bg {
+      background-image: url("https://images.pexels.com/photos/4413/sport-basketball-basketball-basket.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      background-attachment: fixed;
+      /* background-repeat: repeat; */
+      background-position: top center;
+      background-size: cover;
+      background-position: center;
+    }
+    </style>
+  </head>
+
+<body class="bg">
+
 <ul>
 <% if @game.errors.any? %>
 <% @game.errors.full_messages.each do |msg| %>
@@ -18,3 +39,5 @@
 
   <%= f.submit%>
 <%end%>
+
+</body>
